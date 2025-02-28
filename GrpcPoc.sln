@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Grpc.Api", "src\Inventory.Grpc.Api\Inventory.Grpc.Api.csproj", "{86F97F33-0B4D-403C-B8E6-EA846967D953}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Api", "src\Ordering.Api\Ordering.Api.csproj", "{2257A16D-E05F-484E-89D0-0F3ECB129165}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +31,24 @@ Global
 		{86F97F33-0B4D-403C-B8E6-EA846967D953}.Release|x64.Build.0 = Release|Any CPU
 		{86F97F33-0B4D-403C-B8E6-EA846967D953}.Release|x86.ActiveCfg = Release|Any CPU
 		{86F97F33-0B4D-403C-B8E6-EA846967D953}.Release|x86.Build.0 = Release|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Debug|x64.Build.0 = Debug|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Debug|x86.Build.0 = Debug|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Release|x64.ActiveCfg = Release|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Release|x64.Build.0 = Release|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Release|x86.ActiveCfg = Release|Any CPU
+		{2257A16D-E05F-484E-89D0-0F3ECB129165}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{86F97F33-0B4D-403C-B8E6-EA846967D953} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{2257A16D-E05F-484E-89D0-0F3ECB129165} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
