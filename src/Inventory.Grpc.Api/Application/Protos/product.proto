@@ -1,14 +1,42 @@
 syntax = "proto3";
 
 option csharp_namespace = "Inventory.Grpc.Api";
+import "google/api/annotations.proto";
 package product;
 
 service Product {
-	rpc GetValue(GetProductRequest) returns (GetProductResponse) {}
-	rpc Get(GetAllProductsRequest) returns (GetAllProductsResponse) {}
-	rpc Create(CreateProductRequest) returns (CreateProductResponse) {}
-	rpc Update(UpdateProductRequest) returns (UpdateProductResponse) {}
-	rpc Delete(DeleteProductRequest) returns (DeleteProductResponse) {}
+	rpc GetValue(GetProductRequest) returns (GetProductResponse) {
+		option (google.api.http) = {
+			get: "/api/products/{id}"
+		};
+	}
+
+	rpc Get(GetAllProductsRequest) returns (GetAllProductsResponse) {
+		option (google.api.http) = {
+			get: "/api/products"
+		};
+	}
+
+	rpc Create(CreateProductRequest) returns (CreateProductResponse) {
+		option (google.api.http) = {
+			post: "/api/products",
+			body: "*"
+		};
+	}
+
+	rpc Update(UpdateProductRequest) returns (UpdateProductResponse) {
+		option (google.api.http) = {
+			put: "/api/products/{id}",
+			body: "*"
+		};
+	}
+
+	rpc Delete(DeleteProductRequest) returns (DeleteProductResponse) {
+		option (google.api.http) = {
+			delete: "/api/products/{id}",
+			body: "*"
+		};
+	}
 }
 
 message CreateProductRequest {
