@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+option csharp_namespace = "Inventory.Grpc.Api";
+package product;
+
+service Product {
+	rpc GetValue(GetProductRequest) returns (GetProductResponse) {}
+	rpc Get(GetAllProductsRequest) returns (GetAllProductsResponse) {}
+	rpc Create(CreateProductRequest) returns (CreateProductResponse) {}
+	rpc Update(UpdateProductRequest) returns (UpdateProductResponse) {}
+	rpc Delete(DeleteProductRequest) returns (DeleteProductResponse) {}
+}
+
+message CreateProductRequest {
+	string name = 1;
+	int32 quantity = 3;
+	double unitPrice = 2;
+}
+
+message CreateProductResponse {
+	string id = 1;
+	string name = 2;
+	int32 quantity = 4;
+	double unitPrice = 3;
+	string createdAt = 5;
+	string updatedAt = 6;
+}
+
+message GetProductRequest {
+	string id = 1;
+}
+
+message GetProductResponse {
+	string id = 1;
+	string name = 2;
+	int32 quantity = 4;
+	double unitPrice = 3;
+	string createdAt = 5;
+	string updatedAt = 6;
+}
+
+message GetAllProductsRequest {}
+
+message GetAllProductsResponse {
+	repeated GetProductResponse products = 1;
+}
+
+message UpdateProductRequest {
+	string id = 1;
+	string name = 2;
+	int32 quantity = 4;
+	double unitPrice = 3;
+}
+
+message UpdateProductResponse {
+	bool Success = 1;
+}
+
+message DeleteProductRequest {
+	string id = 1;
+}
+
+message DeleteProductResponse {
+	bool success = 1;
+}

@@ -1,6 +1,12 @@
 @Ordering.Api_HostAddress = http://localhost:5076
 
-GET {{Ordering.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{Ordering.Api_HostAddress}}/orders/
+Content-Type: application/json
+
+{
+  "customerName": "uat",
+  "productId": "acecf5f3-ec38-447c-a5a9-44cc7e8c9e1a",
+  "quantity": 4
+}
 
 ###
